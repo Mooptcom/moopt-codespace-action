@@ -20,7 +20,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '16.x'
-      - run: npm ci --legacy-peer-deps
+#      - run: npm ci --legacy-peer-deps
       - run: curl https://install.meteor.com/ | sh
       - name: install
         shell: bash -l {0}
