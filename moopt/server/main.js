@@ -1,5 +1,4 @@
 import { Meteor } from 'meteor/meteor';
-//import Cylon from 'cylon';
 import JohnnyFive from 'johnny-five';
 
 var five = require("johnny-five"),
@@ -17,7 +16,7 @@ Meteor.startup(() => {
         // The builtin LED is marked L on the PCB.
         var led = new five.Led(13);
 
-        //
+        // blink: 1 second = 1000
         led.blink(1000);
 
     }));
