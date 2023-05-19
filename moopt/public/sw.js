@@ -1,6 +1,6 @@
 var dataCacheName = 'Static';
-// var cacheName = 'weatherPWA-final-1';
-var filesToCache = [
+// var cacheName = 'mooptPWA-final-1';
+/*var filesToCache = [
   '/',
 //  '/index.html',
   '/android-chrome-192x192.png'
@@ -14,7 +14,7 @@ self.addEventListener('install', function(event) {
        return cache.addAll(filesToCache);
       })
   );
-});
+});*/
 
 self.addEventListener('activate', function() {
   console.log('SW Activated');
