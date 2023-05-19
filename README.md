@@ -8,3 +8,4 @@ Meteor blaze app to leverage github desktop, codespaces & actions
 2. [Github Actions](https://github.com/actions/starter-workflows)
 3. [MeteorJS Blaze](https://blaze-tutorial.meteor.com/)
 4. Setup Meteor environment at the GitHub Codespaces, leveraging [Meteor.js devcontainer](https://github.com/meteorengineer/meteor-dev-container) by Meteor Engineer
+5. Progressive Web App (PWA)
