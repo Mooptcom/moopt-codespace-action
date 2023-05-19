@@ -1,6 +1,6 @@
 {
-  "name": "Demo_PWA_Meteor",
-  "short_name": "Demo_PWA_Meteor",
+  "name": "MooptOS",
+  "short_name": "MooptOS",
   "start_url": "/?homescreen=1",
   "scope": "/",
   "display": "standalone",
@@ -12,7 +12,8 @@
     {
       "src": "/android-chrome-192x192.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
       "src": "/android-chrome-512x512.png",
