@@ -9,9 +9,13 @@ var five = require("johnny-five");
 const { Board, Thermometer } = require("johnny-five");
 const board = new Board({ port : '/dev/cu.wchusbserial1410' });
 
+import { check } from 'meteor/check';
+import { TemperaturesCollection } from '/imports/api/temperatures/temperaturesCollection';
 
 Meteor.startup(() => {
   // code to run on server at startup
+  
+
   board.on('error', function (error) {
       console.error('Johnny Five Error', error);
   });
@@ -30,13 +34,26 @@ Meteor.startup(() => {
         pin: 5
       });
 
-      thermometer.on("change", () => {
+      thermometer.on("change", Meteor.bindEnvironment(function() {
         const {address, celsius, fahrenheit, kelvin} = thermometer;
-        console.log(`Thermometer at address: 0x${address.toString(16)}`);
-        console.log("  celsius      : ", celsius);
-        console.log("  fahrenheit   : ", fahrenheit);
-        console.log("  kelvin       : ", kelvin);
-        console.log("--------------------------------------");
-      });
+        var date = new Date();
+        var deviceId = board.port;
+        var timestamp = Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate(), date.getUTCHours(), date.getUTCMinutes(), date.getUTCSeconds());        
+        //console.log(`Thermometer at address: 0x${address.toString(16)}`);
+        //console.log("  celsius      : ", celsius);
+        //console.log("  fahrenheit   : ", fahrenheit);
+        //console.log("  kelvin       : ", kelvin);
+        //console.log("--------------------------------------");
+        //console.log(timestamp);
+
+        var data = {
+          "temp": celsius,
+          "ts": timestamp
+        }
+
+        Meteor.call('temperatures.upsert', deviceId, data, function(e, result){
+          //console.log(data);
+        });
+      }));
   }));
 });
