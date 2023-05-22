@@ -24,6 +24,12 @@ An open platform (software and hardware) for decentralized urban farming.
 
 ### How I built it (How did you utilize GitHub Actions or GitHub Codespaces? Did you learn something new along the way? Pick up a new skill?)
 
+#### Hardware
+
+1. Arduino Uno
+2. DS18B20
+3. DFRobot I/O Expansion Shield
+
 ### Additional Resources/Info
 
 1. [GitHub Codespaces](https://github.com/features/codespaces/)
