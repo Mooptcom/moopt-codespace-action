@@ -32,3 +32,4 @@ An open platform (software and hardware) for decentralized urban farming.
 4. Setup Meteor environment at the GitHub Codespaces, leveraging [Meteor.js devcontainer](https://github.com/meteorengineer/meteor-dev-container) by Meteor Engineer
 5. Progressive Web App (PWA)
 6. [Click & Launch a Meteor Blaze App (PWA ready) at Github Codespaces (& Actions test)](https://dev.to/kafechew/click-launch-a-meteor-blaze-app-environment-at-github-codespaces-actions-test-4ek7)
+7. Control your Arduino with a web app via Meteor and [JohnyFive](https://github.com/studiorabota/meteor-johnny-five-tutorial) by Vincent Kranendonk (studiorabota). 
