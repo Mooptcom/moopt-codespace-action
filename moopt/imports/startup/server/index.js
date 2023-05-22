@@ -2,4 +2,4 @@
 
 import './fixtures.js';
 import './register-api.js';
-//import './johnnyfive.js';
+import './johnnyfive.js';

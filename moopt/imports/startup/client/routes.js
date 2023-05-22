@@ -9,7 +9,7 @@ import '../../ui/pages/not-found/not-found.js';
 import '../../ui/components/temperature/temperature.js';
 
 // Set up all routes in the app
-FlowRouter.route('/', {
+FlowRouter.route('/app', {
 	name: 'app',
 	action() {
 		this.render('App');
@@ -23,7 +23,7 @@ FlowRouter.route('/link', {
 	},
 });
 
-FlowRouter.route('/iot', {
+FlowRouter.route('/', {
 	name: 'iot',
 	action() {
 		this.render('temperature');

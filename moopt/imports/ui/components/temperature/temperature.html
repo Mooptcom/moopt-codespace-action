@@ -1,8 +1,9 @@
 <template name="temperature">
-	<h2>IoT Test</h2>
+	<h2>Real-time Temperature (Arduino DS18B20)</h2>
+	<section id="webix-playground"></section>
 	<ul>
 		{{#each temperatures}}
-			<li>{{temp}} - {{ts}}</li>
+			<li>{{temp}}°C - {{date}}</li>
 		{{/each}}
 	</ul>
 </template>

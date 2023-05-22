@@ -35,13 +35,14 @@ Meteor.startup(() => {
 			var timestamp = Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate(), date.getUTCHours(), date.getUTCMinutes(), date.getUTCSeconds());
 			//console.log(`Thermometer at address: 0x${address.toString(16)}`);
 
-			var data = {
+			/*var data = {
+				"id": timestamp,
 	        	"temp": celsius,
 	        	"ts": timestamp
-	        }
+	        }*/
 
-	        Meteor.call('temperatures.upsert', deviceId, data, function(e, result){
-	        	//console.log(data);
+	        Meteor.call('temperature.insert', celsius, date, deviceId, timestamp, function(e, result){
+	        	console.log(result);
 	        });
 		}));    	
   	}));
