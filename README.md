@@ -29,6 +29,7 @@ An open platform (software and hardware) for decentralized urban farming.
 1. Arduino Uno
 2. DS18B20
 3. DFRobot I/O Expansion Shield
+4. 
 
 ### Future Development
 
@@ -45,3 +46,5 @@ An open platform (software and hardware) for decentralized urban farming.
 5. Progressive Web App (PWA)
 6. [Click & Launch a Meteor Blaze App (PWA ready) at Github Codespaces (& Actions test)](https://dev.to/kafechew/click-launch-a-meteor-blaze-app-environment-at-github-codespaces-actions-test-4ek7)
 7. Control your Arduino with a web app via Meteor and [JohnyFive](https://github.com/studiorabota/meteor-johnny-five-tutorial) by Vincent Kranendonk (studiorabota). 
+8. MongoDB Timeseries database
+9. [Temperature Sensing with Raspberry Pi into Mongodb](https://dev.to/kafechew/temperature-sensing-with-raspberry-pi-into-mongodb-3ho3)
