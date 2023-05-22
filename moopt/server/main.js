@@ -21,7 +21,7 @@ Meteor.startup(() => {
 
       // This requires OneWire support using ConfigurableFirmata
       // https://github.com/firmata/ConfigurableFirmata & http://firmatabuilder.com/ 
-      const thermometer = new Thermometer({
+      /*const thermometer = new Thermometer({
         controller: "DS18B20",
         pin: 5
       });
@@ -33,6 +33,6 @@ Meteor.startup(() => {
         console.log("  fahrenheit   : ", fahrenheit);
         console.log("  kelvin       : ", kelvin);
         console.log("--------------------------------------");
-      });
+      });*/
   }));
 });
