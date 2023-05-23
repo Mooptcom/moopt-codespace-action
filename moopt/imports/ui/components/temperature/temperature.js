@@ -4,7 +4,6 @@ import { Meteor } from 'meteor/meteor';
 import './temperature.html';
 import { ReactiveDict } from 'meteor/reactive-dict';
 import { Template } from 'meteor/templating';
-import { Session } from 'meteor/session';
 
 import * as webix from "../../../../public/wx/webix/codebase/webix.js";
 import "../../../../public/wx/meteor-webix-data.js";
