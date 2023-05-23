@@ -5,11 +5,18 @@ import { Accounts } from 'meteor/accounts-base';
 import { TasksCollection } from '/imports/api/tasks/tasksCollection';
 import { LinksCollection } from '../../api/links/linksCollection.js';
 import { MoviesCollection } from '/imports/api/movies/moviesCollection';
+import { TemperaturesCollection } from '/imports/api/temperatures/temperaturesCollection';
 
 const insertTask = (taskText, user) => TasksCollection.insert({
 	text: taskText,
 	userId: user._id,
 	createdAt: new Date(),
+});
+
+const insertTemp = (temp) => TemperaturesCollection.insert({
+	//ts: ts,
+	temp: temp,
+	date: new Date()
 });
 
 const SEED_USERNAME = 'meteorite';
@@ -40,6 +47,18 @@ Meteor.startup(async () => {
 			'Sixth Task',
 			'Seventh Task'
 		].forEach(taskText => insertTask(taskText, user));
+	}
+
+	if (TemperaturesCollection.find().count() === 0) {
+		[
+			31.25,
+			33,
+			28,
+			25,
+			35,
+			31,
+			30
+		].forEach(temp => insertTemp(temp));
 	}
 
 	// If the Links collection is empty, add some data.

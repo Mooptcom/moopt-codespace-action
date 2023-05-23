@@ -22,7 +22,7 @@ Meteor.methods({
 		check(deviceId, String);
 
 		var data = {
-        	'ts': timestamp,
+        	//'ts': timestamp,
         	'temp': celsius,
         	'date': date
         }
