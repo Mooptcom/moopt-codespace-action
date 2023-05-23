@@ -75,7 +75,7 @@ Template.temperature.onRendered(function() {
 				},
 				tooltip:{
 					template: function(obj) {
-						return "#temp# " + " - " + webix.i18n.timeFormatStr(obj.date)
+						return obj.temp + "°C - " + webix.i18n.timeFormatStr(obj.date)
 					}
 				}
 			}
